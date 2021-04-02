@@ -44,8 +44,11 @@ public class WarmUp1Main {
         System.out.println("Task 13\nGiven a string, take the last char and return a new string with the last char added at the front and back, so \"cat\" yields \"tcatt\". The original string will be length 1 or more.");
         System.out.println(warmUp1Main.backAround("candy"));
 
-        System.out.println("Task 14 \n Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % \"mod\" operator");
+        System.out.println("Task 14 \nReturn true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % \"mod\" operator");
         System.out.println(warmUp1Main.or35(10));
+
+        System.out.println("Task 15 \nGiven a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so \"kitten\" yields\"kikittenki\". If the string length is less than 2, use whatever chars are there.");
+        System.out.println(warmUp1Main.front22("java"));
     }
 
     //Task1
@@ -175,7 +178,10 @@ public class WarmUp1Main {
             return false;
         }
     }
-
-
+    //Task15
+    public String front22(String str) {
+        String front = str.substring(0,2);
+        return front + str + front;
+    }
 }
 
