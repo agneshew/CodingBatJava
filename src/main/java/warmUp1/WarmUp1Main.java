@@ -43,6 +43,9 @@ public class WarmUp1Main {
 
         System.out.println("Task 13\nGiven a string, take the last char and return a new string with the last char added at the front and back, so \"cat\" yields \"tcatt\". The original string will be length 1 or more.");
         System.out.println(warmUp1Main.backAround("candy"));
+
+        System.out.println("Task 14 \n Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % \"mod\" operator");
+        System.out.println(warmUp1Main.or35(10));
     }
 
     //Task1
@@ -163,6 +166,16 @@ public class WarmUp1Main {
             return str;
         }
     }
+    //Task14
+    public boolean or35(int n) {
+        if (n % 3 == 0 || n % 5 == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 }
 
