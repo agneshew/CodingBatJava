@@ -49,6 +49,16 @@ public class WarmUp1Main {
 
         System.out.println("Task 15 \nGiven a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so \"kitten\" yields\"kikittenki\". If the string length is less than 2, use whatever chars are there.");
         System.out.println(warmUp1Main.front22("java"));
+
+        System.out.println("Task 16 \nGiven a string, return true if the string starts with \"hi\" and false otherwise.");
+        System.out.println(warmUp1Main.startHi("hi java"));
+
+        System.out.println("Task 17 \nGiven two temperatures, return true if one is less than 0 and the other is greater than 100.");
+        System.out.println(warmUp1Main.icyHot(23,105));
+
+        System.out.println("Task 18 \n");
+
+
     }
 
     //Task1
@@ -183,5 +193,25 @@ public class WarmUp1Main {
         String front = str.substring(0,2);
         return front + str + front;
     }
+    //Task16
+    public boolean startHi(String str) {
+        if (str.length() >= 2 && str.substring(0, 2).equals("hi")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    //Task17
+    public boolean icyHot(int temp1, int temp2) {
+        if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
 }
 
