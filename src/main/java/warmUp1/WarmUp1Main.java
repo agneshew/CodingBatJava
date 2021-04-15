@@ -56,8 +56,8 @@ public class WarmUp1Main {
         System.out.println("Task 17 \nGiven two temperatures, return true if one is less than 0 and the other is greater than 100.");
         System.out.println(warmUp1Main.icyHot(23,105));
 
-        System.out.println("Task 18 \n");
-
+        System.out.println("Task 18 \nGiven 2 int values, return true if either of them is in the range 10..20 inclusive.");
+        System.out.println(warmUp1Main.in1020(25,26));
 
     }
 
@@ -211,6 +211,16 @@ public class WarmUp1Main {
             return false;
         }
     }
+    //Task18
+    public boolean in1020(int a, int b) {
+        if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 
 }
