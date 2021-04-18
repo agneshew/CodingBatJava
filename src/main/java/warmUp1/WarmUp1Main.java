@@ -59,6 +59,8 @@ public class WarmUp1Main {
         System.out.println("Task 18 \nGiven 2 int values, return true if either of them is in the range 10..20 inclusive.");
         System.out.println(warmUp1Main.in1020(25,26));
 
+        System.out.println("Task 19 \nWe'll say that a number is \"teen\" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.");
+        System.out.println(warmUp1Main.hasTeen(10,34,88));
     }
 
     //Task1
@@ -220,8 +222,9 @@ public class WarmUp1Main {
             return false;
         }
     }
-
-
-
+    //Task19
+    public boolean hasTeen(int a, int b, int c) {
+        return (a>=13 && a<=19) || (b>=13 && b<=19) || (c>=13 && c<=19);
+    }
 }
 
