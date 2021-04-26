@@ -61,6 +61,16 @@ public class WarmUp1Main {
 
         System.out.println("Task 19 \nWe'll say that a number is \"teen\" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.");
         System.out.println(warmUp1Main.hasTeen(10,34,88));
+
+        System.out.println("Task 20 \nWe'll say that a number is \"teen\" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.");
+        System.out.println(warmUp1Main.loneTeen(15, 3));
+
+        System.out.println("Task 21 \nGiven a string, if the string \"del\" appears starting at index 1, return a string where that \"del\" has been deleted. Otherwise, return the string unchanged.");
+        System.out.println(warmUp1Main.delDel("Adele"));
+
+        System.out.println("Task 22 \nReturn true if the given string begins with \"mix\", except the 'm' can be anything, so \"pix\", \"9ix\" .. all count.");
+        System.out.println(warmUp1Main.mixStart("pixi"));
+
     }
 
     //Task1
@@ -206,12 +216,7 @@ public class WarmUp1Main {
     }
     //Task17
     public boolean icyHot(int temp1, int temp2) {
-        if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return ((temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100));
     }
     //Task18
     public boolean in1020(int a, int b) {
@@ -224,7 +229,32 @@ public class WarmUp1Main {
     }
     //Task19
     public boolean hasTeen(int a, int b, int c) {
-        return (a>=13 && a<=19) || (b>=13 && b<=19) || (c>=13 && c<=19);
+        return ((13 <= a && a <= 19) || (13 <= b && b <= 19) || (13 <= c && c <= 19));
+    }
+    //Task20
+    public boolean loneTeen(int a, int b){
+        if ((13 <= a && a <= 19) && (13 <= b && b <= 19)) {
+            return false;
+        }
+        else if ((13 <= a && a <= 19) || (13 <= b && b <= 19)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    //Task21
+    public String delDel(String str) {
+        if ( str.length() >= 4 && str.substring(1,4).contains("del") ) {
+            return str.substring(0,1) + (str.substring(4));
+        }
+        else {
+            return str;
+        }
+    }
+    //Task22
+    public boolean mixStart(String str) {
+        return (str.length() >= 3 && str.substring(1,3).contains("ix"));
     }
 }
 
